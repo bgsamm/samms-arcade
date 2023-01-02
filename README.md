@@ -1,1 +1,1 @@
-The website is hosted with Firebase at https://cis166aa-samms-arcade.web.app/.
+The website is live at https://cis166aa-samms-arcade.web.app/.
