@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samm's Arcade - About</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Samm's Arcade</h1>
+  </header>
+  <nav class="main">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pong.html">PONG</a></li>
+      <li><a href="snake.html">SNAKE</a></li>
+      <li><a href="bricks.html">BRICKS</a></li>
+      <li><a href="form.html">Submit</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <article>
+    <h2>Featured JavaScript Skills</h2>
+    <section>
+      <h3>Conditional Expressions</h3>
+      <p>
+        In my recreation of the game PONG, conditional expressions play a central role in the game's physics.
+        For example, to decide whether the ball should bounce off one of the paddles, the game checks if the ball's
+        current height is between the top and bottom ends of the paddle and if its horizontal position is right in
+        front of the paddle (with some bound for error).
+      </p>
+      <p>
+        Another use of conditional expressions is to keep the paddles from moving off the screen. For the player's
+        paddle, for example, if the top of the paddle is within a certain distance from the top edge of the playing
+        field, the game will not move the paddle any further up, even if the player is still pressing the up arrow.
+      </p>
+      <p>
+        You can see the PONG game and its use of conditionals <a href="pong.html">here</a>.
+      </p>
+    </section>
+    <section>
+      <h3>Arrays</h3>
+      <p>
+        My recreation of SNAKE makes heavy use of arrays. In particular, the snake is mainly represented by two arrays:
+        one for its body and one for its "skeleton."
+      </p>
+      <p>
+        The body array contains a list of coordinates (really just arrays of size 2), representing the location of each
+        segment in the snake's body. Each time step, a new coordinate is added to the front of the array (the head) that
+        is slightly in front of the current head, and the coordinate at the end of the array (the tail) is removed. This
+        lets the snake move smoothly from the point of view of the player.
+      </p>
+      <p>
+        Because the body array may contain many segments, I implemented a "skeleton" array to try and improve performance.
+        The skeleton array contains only those coordinates representing the cells occupied by the snake in the grid of
+        movement. Then, instead of checking every segment of the body every frame to see if the snake has collided into
+        itself, the game only needs to check the handful of segments in the skeleton.
+      </p>
+      <p>
+        You can check out SNAKE and its underlying arrays <a href="snake.html">here</a>.
+      </p>
+    </section>
+    <section>
+      <h3>Loops</h3>
+      <p>
+        There are quite a few bricks in the game BRICKS. Manipulating each one individually would be a huge
+        pain and severely restrict my ability to change, e.g., how the bricks are laid out or how I detect
+        collisions between the bricks and the ball. For that reason, BRICKS makes heavy use of loops.
+      </p>
+      <p>
+        When setting up the game, I use a few for-loops to initialize the positions of the bricks. That way,
+        I don't have to position them each individually, and it is easy to change e.g. how many bricks are in
+        a row or how many rows of bricks there are.
+      </p>
+      <p>
+        Then, during the game, a for-loop iterates over the bricks each frame to check whether the ball has
+        collided with any of them. If so, the brick gets removed, the ball bounces, and the for-loop ends.
+        Finally, I use a for-loop when drawing the bricks each frame.
+      </p>
+      <p>
+        You can see the for-loops of BRICKS in action <a href="bricks.html">here</a>.
+      </p>
+    </section>
+    <section>
+      <h3>jQuery</h3>
+      <p>
+        I used the jQuery library to implement two different sidebars on my home page.
+      </p>
+      <p>
+        For the sidebar on the left, a sliding animation hides/reveals a response when the user selects
+        an answer to the question. To do this, I used jQuery's .on() method to add 'click' event listeners to
+        the two radio buttons, and I used the .slideUp() and .slideDown() methods to create the animation.
+      </p>
+      <p>
+        On the right, there is a clock which updates every second (1000 ms). I use jQuery to get the elements
+        for the date and time texts and then use the .html() jQuery method to set the updated text for each element.
+      </p>
+      <p>
+        You can view the sidebars <a href="index.html">here</a>.
+      </p>
+    </section>
+    <section>
+      <h3>Form Validation</h3>
+      <p>
+        Under the 'Submit' tab, there is a form that allows a user to submit an idea or request for a new game
+        to be added to the site.
+      </p>
+      <p>
+        For validation, I included a script that adds 'blur' event listeners to disable the submit button until all
+        fields have been completed. When a user leaves a field, the event listener for that field will revalidate
+        the form to see if it is ready to be submitted.
+      </p>
+      <p>
+        The script also limits the description of the game to 200 characters through an 'input' event listener on
+        the text area and provides an updated "characters remaining" count as a user types.
+      </p>
+      <p>
+        You can view the form <a href="form.html">here</a>.
+      </p>
+    </section>
+  </article>
+  <footer>
+    <p>Sean Miller &bull; CIS166AA 25206</p>
+  </footer>
+</body>
+</html>

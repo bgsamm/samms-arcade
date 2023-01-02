@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samm's Arcade - Submit</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Samm's Arcade</h1>
+  </header>
+  <nav class="main">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pong.html">PONG</a></li>
+      <li><a href="snake.html">SNAKE</a></li>
+      <li><a href="bricks.html">BRICKS</a></li>
+      <li><a href="form.html">Submit</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <form id="order">
+    <h3>Game Submission Form</h3>
+    <p>Submit your idea for a new game for the site!</p>
+    <fieldset id="name">
+      <legend>Name</legend>
+      <label for="first-name">
+          First
+          <input type="text" name="first-name" id="first-name" required>
+      </label>
+      <label for="last-name">
+          Last
+          <input type="text" name="last-name" id="last-name" required>
+      </label>
+      <label for="middle-init">
+          M.I.
+          <input type="text" name="middle-init" id="middle-init" maxlength="1">
+      </label>
+    </fieldset>
+    <fieldset id="address">
+      <legend>Contact Info</legend>
+      <label for="email-addr">
+          Email
+          <input type="email" name="email-addr" id="email-addr" required>
+      </label>
+      <label for="phone">
+          Phone
+          <input type="tel" name="phone" id="phone" required>
+      </label>
+    </fieldset>
+    <fieldset id="instructions">
+      <legend>Details</legend>
+      <label for="game-title">
+          Title
+          <input type="text" name="game-title" id="game-title" required>
+      </label>
+      <label for="game-year">
+          Year
+          <input type="number" name="game-year" id="game-year" required>
+      </label><br><br>
+      <label for="instruction-area">
+          Description (limit 200 characters)
+          <textarea name="instruction-area" id="instruction-area" rows="6"></textarea>
+      </label>
+      <p class="subtext">Characters remaining: 200</p>
+    </fieldset>
+    <fieldset id="submit">
+      <input type="submit" class="my-button" name="submit-btn" id="submit-btn" value="Submit" disabled>
+    </fieldset>
+  </form>
+  <footer>
+    <p>Sean Miller &bull; CIS166AA 25206</p>
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+  </footer>
+</body>
+</html>

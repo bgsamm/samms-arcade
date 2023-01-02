@@ -1,0 +1,247 @@
+/* 
+ * File: style.css
+ * Author: Sean Miller
+ *
+ * Contains site-wide styles
+ */
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/* document styles */
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: darkslateblue;
+  min-height: 100vh;
+}
+
+/* heading styles */
+h1, h2, h3 {
+  text-align: center;
+}
+h1 {
+  padding: 0.8em;
+}
+h2 {
+  color: white
+}
+h3 {
+  padding: 0 0 0.5em;
+}
+
+/* navigation styles */
+nav.main {
+  background-color: rgb(29, 14, 39);
+  text-align: center;
+}
+nav.main li {
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+nav.main li:hover {
+  background-color: rgb(37, 18, 49);
+  cursor: pointer;
+}
+nav.main a {
+  display: block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-size: 14pt;
+  color: white;
+}
+
+/* page styles */
+header {
+  background-color: midnightblue;
+  color: white;
+}
+article {
+  margin: 2em;
+}
+section {
+  max-width: 40%;
+  padding: 2em 3em;
+  margin: 10px auto;
+  background-color: white;
+}
+p {
+  padding: 0.5em 0;
+  line-height: 1.5em;
+}
+p.controls {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* sidebar styles */
+.sidebar {
+  position: absolute;
+  width: 13em;
+  padding: 0.5em 1em;
+  border: 3px solid black;
+  background-color: white;
+}
+.sidebar input[type=radio] {
+  margin: 1em;
+}
+#sidebar-left {
+  top: 15em;
+  left: 7%;
+}
+#sidebar-right {
+  top: 18em;
+  right: 7%;
+}
+#sidebar-controls {
+  top: 15em;
+  right: 1%;
+  width: 10em;
+}
+
+/* form styles */
+form {
+  flex: 1;
+  width: 500px;
+  padding: 1em;
+  border-radius: 5px;
+  margin: 1em auto;
+  background-color: white;
+}
+form h3 {
+  font-size: 18pt;
+}
+form p {
+  text-align: center;
+}
+form p.subtext {
+  text-align: left;
+  font-size: 10pt;
+  padding: 0;
+}
+form input {
+  padding: 0 0.2em;
+  border: 1px solid silver;
+  margin: 0 1em 0 0.2em;
+  background: lightgray;
+  font-size: 11pt;
+  max-width: 100px;
+}
+form input[type=email] {
+  min-width: 180px;
+}
+fieldset {
+  border: 2px groove lightgray;
+  margin: 0.5em 0 2em;
+  padding: 0.5em;
+  height: 2.5em;
+}
+legend {
+  font-size: 1.1em;
+}
+textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid silver;
+  margin: 0.2em 0;
+  background: #DDDDDD;
+  resize: none;
+}
+select, option {
+  background: #DDDDDD;
+}
+.my-button {
+  padding: 0.5em;
+  border: 1px solid silver;
+  border-radius: 10%;
+  background-color: #DDDDDD;
+}
+.my-button:hover {
+  cursor: pointer;
+}
+.my-button:active {
+  outline: none;
+  padding: 0.6em 0.5em 0.4em;
+}
+#middle-init, #state, #zip-code {
+  text-align: center;
+}
+#middle-init {
+  width: 1.2em;
+}
+#instructions {
+  clear: both;
+  height: auto;
+  padding-right: 1.2em;
+}
+#submit {
+  padding: 0;
+  border: none;
+  margin: 1em 0 0 0;
+  text-align: center;
+}
+
+/* game styles */
+#game {
+  width: 1000px;
+  height: 600px;
+  border: 8px solid slateblue;
+  margin: auto;
+  background-color: black;
+}
+#score {
+  position: absolute;
+  left: 50%;
+  top: 170px;
+  margin-left: -34px;
+  color: white;
+  font-size: 30pt;
+}
+
+/* footer styles */
+footer {
+  background-color: rgb(37, 18, 49);
+  text-align: center;
+}
+footer p {
+  display: inline-block;
+  padding: 0.4em 1em;
+  font-size: 11pt;
+  color: white;
+}
+
+/* utility styles */
+.centered {
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  #score {
+    left: 540px;
+  }
+}
+
+@media (max-width: 1450px) {
+  #sidebar-controls {
+    position: relative;
+    top: 0;
+    margin: 1em auto 0;
+    width: 40%;
+  }
+}

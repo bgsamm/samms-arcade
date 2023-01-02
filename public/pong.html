@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samm's Arcade - PONG</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1 id="h1">Samm's Arcade</h1>
+  </header>
+  <nav class="main">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pong.html">PONG</a></li>
+        <li><a href="snake.html">SNAKE</a></li>
+        <li><a href="bricks.html">BRICKS</a></li>
+        <li><a href="form.html">Submit</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <article>
+    <div class="centered">
+      <div id="score">0&nbsp;&nbsp;0</div>
+      <canvas id="game"></canvas>
+    </div>
+    <div id="sidebar-controls" class="sidebar">
+      <h3>Instructions</h3>
+      <p>
+        Use the up and down arrow keys to move your paddle and hit the ball.
+      </p>
+      <p>
+        Get the ball past your opponent's paddle to score a point.
+        The first player to score 6 points wins!
+      </p>
+      <p>
+        Press any key to start.
+      </p>
+    </div>
+  </article>
+  <footer>
+    <p>Sean Miller &bull; CIS166AA 25206</p>
+    <script src="js/pong.js"></script>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samm's Arcade - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/apps.css">
+</head>
+<body>
+  <header>
+    <h1>Samm's Arcade</h1>
+  </header>
+  <nav class="main">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pong.html">PONG</a></li>
+      <li><a href="snake.html">SNAKE</a></li>
+      <li><a href="bricks.html">BRICKS</a></li>
+      <li><a href="form.html">Submit</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <article>
+    <div id="sidebar-left" class="sidebar">
+      <p>
+        Welcome to Samm's Arcade!<br>
+        How are you today?
+      </p>
+      <input type="radio" id="good" name="answer" value="good">
+      <label for="good">Good</label><br>
+      <input type="radio" id="notgood" name="answer" value="notgood">
+      <label for="notgood">Not Good</label>
+      <p id="response"></p>
+    </div>
+    <div id="sidebar-right" class="sidebar">
+      <h3>Clock</h3>
+      <p id="date"></p>
+      <p id="time"></p>
+    </div>
+  <!--
+    <div id="sidebar-right" class="sidebar recipe">
+      <h2>[Title]</h2>
+      <div class="ingredients">
+        <h3>Ingredients</h3>
+        <ul></ul>
+      </div>
+      <p class="servings"><b>Servings:</b> </p>
+    </div>
+  -->
+    <div id="app-layout">
+      <figure id="game1">
+        <div class="app">
+          <a href="pong.html"></a>
+        </div>
+        <figcaption>PONG</figcaption>
+      </figure>
+      <figure id="game2">
+        <div class="app">
+          <a href="snake.html"></a>
+        </div>
+        <figcaption>SNAKE</figcaption>
+      </figure>
+      <figure id="game3">
+        <div class="app">
+          <a href="bricks.html"></a>
+        </div>
+        <figcaption>BRICKS</figcaption>
+      </figure>
+    <!--
+      <figure id="game4">
+        <div class="app"></div>
+        <figcaption>???</figcaption>
+      </figure>
+    -->
+    </div>
+  </article>
+  <footer>
+    <p>Sean Miller &bull; CIS166AA 25206</p>
+    <script src="js/jquery-3.5.0.js"></script>
+    <script src="js/main.js"></script>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/*
+ * File: apps.css
+ * Author: Sean Miller
+ *
+ * Stylizes the array of "apps" on the home page
+ */
+
+#app-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 50%;
+  margin: auto;
+}
+figure {
+  display: inline-block;
+  margin: 0.5em;
+  text-align: center;
+}
+figcaption {
+  border-radius: 6px;
+  background-color: slateblue;
+  font-size: 14pt;
+  font-weight: bold;
+  color: white;
+}
+.app a {
+  display: block;
+  height: 100%;
+}
+.app {
+  height: 15em;
+  width: 20em;
+  margin: 0.5em auto;
+  background-color: black;
+  border-radius: 5%;
+  cursor: pointer;
+  
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.app:hover {
+   -webkit-transform: scale(1.05);
+   transform: scale(1.05);
+}
+#game1 div {
+  background-image: url("../images/pong.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#game2 div {
+  background-image: url("../images/snake.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#game3 div {
+  background-image: url("../images/bricks.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
